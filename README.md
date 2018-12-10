@@ -12,7 +12,11 @@
 
 ### Functionality improvements
 
-* Add new augmentation techniques
+* Add new augmentation techniques:
+    - [Roundtrip translation](https://github.com/samhavens/roundtrip), as mentioned in [QANET: COMBINING LOCAL CONVOLUTION WITH GLOBAL SELF-ATTENTION FOR READING COMPREHENSION](https://openreview.net/pdf?id=B14TlG-RW)
+    - [Contextual Augmentation](https://github.com/pfnet-research/contextual_augmentation), based on the paper [Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations](https://arxiv.org/abs/1805.06201)
+    - N-gram replacement and blanking (need to write this, I think), from [DATA NOISING AS SMOOTHING IN NEURAL NETWORK
+LANGUAGE MODELS](https://arxiv.org/pdf/1703.02573.pdf)
 
 ## Original README
 
