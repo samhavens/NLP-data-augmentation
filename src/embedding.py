@@ -1,23 +1,20 @@
 import pandas as pd
 import numpy as np
 from gensim.models.keyedvectors import KeyedVectors
+import gensim.downloader as api
 
 
 def get_corpus(corpus_):
     """Loads pre-trained word2vec model from src/ directory and 
     returns a gensim word2vec object"""
     if corpus_ == 'google':
-        return KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin',
-                                                 binary=True)
-    if corpus_=='glove':
-        return KeyedVectors.load_word2vec_format('glove_gensim_vectors.txt',
-                                                 binary=False)
-    if corpus_=='fasttext':
-        return KeyedVectors.load_word2vec_format('crawl-300d-2M.vec',
-                                                 binary=False,
-                                                 encoding='UTF-8')
-    
+        return api.load('word2vec-google-news-300')
 
+    if corpus_=='glove':
+        return api.load('glove-twitter-50')
+
+    if corpus_=='fasttext':
+        return api.load('fasttext-wiki-news-subwords-300')
 
 
 if __name__ == '__main__':
