@@ -25,11 +25,13 @@ This repository consists of code snippets that were created as part of my Master
 ## Installation
 
 ### Python requirements
-This project is written in python 3 and requires a python3 venv. Once created, install the requirements: `pip install -r requirements.txt`
+This project is written in python 3 and requires a python3 venv. Once created, install the requirements: `pip install -r requirements.txt` (SH note - LOL there is no `requirements.txt` - adding Pipenv)
 
 ### Other dependencies
 
-Most models require pre-trained word vector models. As these models are relatively large, I ommitted them from the git repo. To download the files automatically, run the shell script ```./pretrained_vectors.sh```
+~Most models require pre-trained word vector models. As these models are relatively large, I ommitted them from the git repo. To download the files automatically, run the shell script ```./pretrained_vectors.sh```~
+
+Models are downloaded as needed using `gensim.downloader`, which is automatically called by Gensim. See more [here](https://github.com/RaRe-Technologies/gensim-data).
 
 
 To download the pretrained vectors manually, save the following files in the ```src/``` directory. 
@@ -51,7 +53,9 @@ Loads in a word embedding pre-trained on one of the large text corpora given abo
 Replaces all words of a given POS-tag (given as argument) in the sentence with their most similar word vector from a large pre-trained word embedding.
 
 ### Generative
-Trains a two-layer LSTM network to learn the word representations of given class. The network then generates new samples of the class by initialising a random start word and following the LSTM's predictions of the next word given the previous sequence. 
+The idea of this is: train a two-layer LSTM network to learn the word representations of given class. The network then generates new samples of the class by initialising a random start word and following the LSTM's predictions of the next word given the previous sequence. 
+
+However, this hasn't been implemented yet.
 
 
 ## Input
