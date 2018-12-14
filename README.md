@@ -56,19 +56,4 @@ Takes in a CSV file with mutually exclusive, numerical labels and text input. Th
 
 ## Fork Plan
 
-### DX improvements
-
-* Make this work in python 2 or 3
-* Minimize downloads (use local glove if available)
-* Put on pip / conda
-* Make sure integration with pandas, scikit-learn is easy and well-documented
-* Possibly make this a plugin to fastai?
-
-### Functionality improvements
-
-* Add new augmentation techniques:
-    - [Roundtrip translation](https://github.com/samhavens/roundtrip), as mentioned in [QANET: COMBINING LOCAL CONVOLUTION WITH GLOBAL SELF-ATTENTION FOR READING COMPREHENSION](https://openreview.net/pdf?id=B14TlG-RW)
-    - [Contextual Augmentation](https://github.com/pfnet-research/contextual_augmentation), based on the paper [Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations](https://arxiv.org/abs/1805.06201)
-    - N-gram replacement and blanking (need to write this, I think), from [DATA NOISING AS SMOOTHING IN NEURAL NETWORK
-LANGUAGE MODELS](https://arxiv.org/pdf/1703.02573.pdf)
-
+The idea is to add many NLP Data augmentation techniques and have them in one place. These are enumerated in the issues. Also, improving developer experience is important. Text data augmentation is not widely adopted, and making it easy to do will help speed adoption.
